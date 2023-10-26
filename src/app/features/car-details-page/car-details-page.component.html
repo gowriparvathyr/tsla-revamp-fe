@@ -1,0 +1,28 @@
+<div class="car-details-container" *ngIf="car?.model">
+    <div class="heading-block">
+        <img (click)="navigateback()" src="assets/icons/back.png" alt="back">
+        <h2>{{ car.model }}</h2>
+    </div>
+    <div class="data-container">
+        <div><img [src]="car.image" alt="{{car.model}}" class="image-class"/></div>
+        <div>
+            <p>{{ car.description }}</p>
+            <p>Price: {{ car.price }}</p>
+            <p>Available Variants:</p>
+            <ul>
+                <li *ngFor="let variant of car.variants" [class.active]="car.selectedVariant === variant"
+                    (click)="selectVariant(variant)">{{ variant }}</li>
+            </ul>
+            <div class="color-selector">
+                <label for="color">Select Color:</label>
+                <select id="color" [(ngModel)]="car.color" (change)="updateCarImages()">
+                    <option value="white">White</option>
+                    <option value="black">Black</option>
+                    <option value="red">Red</option>
+                </select>
+            </div>
+            <button class="build-and-price-button">Build and Price</button>
+        </div>
+    </div>
+    
+</div>
