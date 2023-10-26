@@ -14,7 +14,7 @@
         "id": 100
     },
     {
-        "image": "assets/images/white.webp",
+        "image": "assets/images/red.jpg",
         "model": "Model Y",
         "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
         "price": "$79,00,000",
@@ -24,11 +24,11 @@
             "Performance"
         ],
         "selectedVariant": "Standard Range",
-        "color": "white",
+        "color": "red",
         "id": 101
     },
     {
-        "image": "assets/images/white.webp",
+        "image": "assets/images/black.jpg",
         "model": "Model Z",
         "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
         "price": "$79,00,000",
@@ -38,7 +38,7 @@
             "Performance"
         ],
         "selectedVariant": "Standard Range",
-        "color": "white",
+        "color": "black",
         "id": 102
     },
     {

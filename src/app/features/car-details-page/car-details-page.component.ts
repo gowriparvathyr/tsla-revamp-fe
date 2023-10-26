@@ -11,7 +11,8 @@ import { ICarDetails } from 'src/app/utils/car-details.interface';
   styleUrls: ['./car-details-page.component.css']
 })
 export class CarDetailsPageComponent {
-  car!: ICarDetails
+  car!: ICarDetails;
+  availableColors = ['white', 'black', 'red'];
 
   constructor(private teslaDataService: TeslaDataService, private location: Location, private activatedRoute: ActivatedRoute){}
   // istanbul ignore next
@@ -40,4 +41,10 @@ export class CarDetailsPageComponent {
   navigateback(){
     this.location.back()
   }
+  // istanbul ignore next
+  selectColor(color: string) {
+    this.car.color = color;
+    this.updateCarImages();
+  }
+
 }

@@ -9,19 +9,31 @@
             <p>{{ car.description }}</p>
             <p>Price: {{ car.price }}</p>
             <p>Available Variants:</p>
-            <ul>
+            <!-- <ul>
                 <li *ngFor="let variant of car.variants" [class.active]="car.selectedVariant === variant"
                     (click)="selectVariant(variant)">{{ variant }}</li>
-            </ul>
+            </ul> -->
+            <ul class="chip-list">
+                <li
+                  *ngFor="let variant of car.variants"
+                  [ngClass]="{'chip': true, 'selected-chip': car.selectedVariant === variant}"
+                  (click)="selectVariant(variant)"
+                >
+                  {{ variant }}
+                </li>
+              </ul>
             <div class="color-selector">
                 <label for="color">Select Color:</label>
-                <select id="color" [(ngModel)]="car.color" (change)="updateCarImages()">
-                    <option value="white">White</option>
-                    <option value="black">Black</option>
-                    <option value="red">Red</option>
-                </select>
-            </div>
-            <button class="build-and-price-button">Build and Price</button>
+                <div class="color-tiles">
+                  <div
+                    *ngFor="let color of availableColors"
+                    [ngStyle]="{ 'background-color': color, 'box-shadow': color === car.color ? '0 0 5px rgba(0, 0, 0, 0.9)' : 'none' }"
+                    [class.selected]="color === car.color"
+                    (click)="selectColor(color)"
+                  ></div>
+                </div>
+              </div>
+            <button class="build-and-price-button" [routerLink]="['/build-and-price']">Build and Price</button>
         </div>
     </div>
     

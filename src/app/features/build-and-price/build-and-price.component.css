@@ -1,0 +1,12 @@
+.car-details-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .car-details-container p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  .content{
+    margin-top: 40px;
+  }

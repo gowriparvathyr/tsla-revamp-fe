@@ -16,7 +16,6 @@
   }
   
   ul li {
-    margin: 0 10px;
     font-size: 1.2em;
     cursor: pointer;
   }
@@ -64,5 +63,44 @@
   }
   .car-details-container p:first-child{
     margin-top: 0 !important;
+    margin-left: 20px
+  }
+  
+  .color-tiles {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .color-tiles > div {
+    cursor: pointer;
+    margin: 5px;
+    padding: 20px;
+    border: 1px solid #ccc;
+  }
+  
+  .color-tiles > div.selected {
+    background-color: #ccc;
+    color: #fff;
+    border: 1px solid #ccc;;
+  }
+  .chip-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .chip {
+    display: flex;
+    margin: 5px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    border-radius: 4px;
+    align-items: center;
+  }
+  
+  .selected-chip {
+    background-color: #0e0e0e;
+    color: #fff;
+    border-color: #333;
   }
   
